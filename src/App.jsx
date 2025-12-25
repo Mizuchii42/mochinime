@@ -6,6 +6,7 @@ import Navbutton from './componnent/btm'
 import Navbar from './componnent/nav'
 import Search from './page/search'
 import Strm from './page/strim/[slug]'
+import Changelog from './page/changelog'
 //import { useEffect, useState } from 'react'
 //import axios from 'axios'
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path='/data/:id' element={<Viewpage />} />
             <Route path='/strim/:slug' element={<Strm />} />
             <Route path='/search' element={<Search />} />
+            <Route path='/changelog' element={<Changelog />} />
           </Routes>
         </Router>
       </div>

@@ -1,4 +1,4 @@
-import { Home, Search } from "react-feather";
+import { Home, Search, HelpCircle } from "react-feather";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -9,6 +9,7 @@ const Navbar = () => {
         <div className="mr-5 flex gap-3">
           <Link to="/"><Home color="oklch(68.5% 0.169 237.323)" size="25px" /></Link>
           <Link to="/search"><Search color="oklch(68.5% 0.169 237.323)" size="25px" /></Link>
+          <Link to="/changelog"><HelpCircle color="oklch(68.5% 0.169 237.323)" size="25px" /></Link>
 
         </div>
       </div>
