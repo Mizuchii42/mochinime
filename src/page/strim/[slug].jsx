@@ -71,22 +71,21 @@ const Strm = () => {
   /* ================= RENDER ================= */
 
   return (
-    <div className="pt-20 max-w-6xl mx-auto px-4 w-full h-svh">
+    <div className="pt-20 w-full mx-auto px-4 w-full max-h-min">
       {/* PLAYER */}
       <iframe
         src={stream.videoStream}
         title="Anime Stream"
-        className="w-full h-[200px] rounded mb-8"
+        className="w-full h-50 rounded mb-8"
         allowFullScreen
         loading="lazy"
       />
 
-      {/* EPISODE LIST */}
       {view && (
         <div>
           <h2 className="text-xl font-bold mb-4">Daftar Episode</h2>
 
-          <div className="w-full h-89 bg-gray-800 overflow-y-auto mb-20">
+          <div className="w-full h-72 bg-gray-800 overflow-y-auto mb-10">
             {view[0]?.eps?.map((ep, i) => (
               <div className="w-full h-16 mt-2 hover:bg-sky-500 hover:text-white transition">
                 <Link
