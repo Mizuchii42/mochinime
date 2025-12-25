@@ -13,6 +13,7 @@ const Viewpage = () => {
           `https://server.mochinime.cyou/view/${decodeURIComponent(id)}`
         )
         setData(res.data.anime)
+        localStorage.setItem("id-anime", id);
       } catch (err) {
         console.log(err)
       }
