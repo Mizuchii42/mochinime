@@ -86,9 +86,9 @@ const Strm = () => {
         <div>
           <h2 className="text-xl font-bold mb-4">Daftar Episode</h2>
 
-          <div className="w-full h-96 bg-gray-800 overflow-y-auto mb-20">
+          <div className="w-full h-89 bg-gray-800 overflow-y-auto mb-20">
             {view[0]?.eps?.map((ep, i) => (
-              <div className="w-full h-16 mt-3 border rounded text-center hover:bg-sky-500 hover:text-white transition">
+              <div className="w-full h-16 mt-2 hover:bg-sky-500 hover:text-white transition">
                 <Link
                   key={i}
                   to={`/strim/${encodeURIComponent(ep.plink)}`}
