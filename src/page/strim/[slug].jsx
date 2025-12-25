@@ -86,15 +86,17 @@ const Strm = () => {
         <div>
           <h2 className="text-xl font-bold mb-4">Daftar Episode</h2>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-2 w-full h-86 bg-gray-800 overflow-y-auto mb-20">
+          <div className="w-full h-96 bg-gray-800 overflow-y-auto mb-20">
             {view[0]?.eps?.map((ep, i) => (
-              <Link
-                key={i}
-                to={`/strim/${encodeURIComponent(ep.plink)}`}
-                className="p-3 border rounded text-center hover:bg-sky-500 hover:text-white transition"
-              >
-                {ep.ptitle}
-              </Link>
+              <div className="w-full h-16 mt-3 border rounded text-center hover:bg-sky-500 hover:text-white transition">
+                <Link
+                  key={i}
+                  to={`/strim/${encodeURIComponent(ep.plink)}`}
+                  className=""
+                >
+                  {ep.ptitle}
+                </Link>
+              </div>
             ))}
           </div>
         </div>
