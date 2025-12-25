@@ -60,7 +60,7 @@ const Strm = () => {
             src={data.videoStream}
             title="Anime Stream"
             width="100%"
-            height="400"
+            height="250"
             frameBorder="0"
             allowFullScreen
           />
