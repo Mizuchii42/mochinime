@@ -7,6 +7,7 @@ import Navbar from './componnent/nav'
 import Search from './page/search'
 import Strm from './page/strim/[slug]'
 import Changelog from './page/changelog'
+import Mainten from './page/maintent'
 //import { useEffect, useState } from 'react'
 //import axios from 'axios'
 function App() {
@@ -16,7 +17,7 @@ function App() {
         <Router>
           <Navbar />
           <Routes>
-            <Route path='/' element={<Home />} />
+            <Route path='/' element={<Mainten />} />
             <Route path='/data/:id' element={<Viewpage />} />
             <Route path='/strim/:slug' element={<Strm />} />
             <Route path='/search' element={<Search />} />
