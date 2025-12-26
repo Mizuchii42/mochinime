@@ -20,7 +20,7 @@ function App() {
             <Route path='/' element={<Mainten />} />
             <Route path='/data/:id' element={<Viewpage />} />
             <Route path='/strim/:slug' element={<Strm />} />
-            <Route path='/search' element={<Search />} />
+            <Route path='/search' element={<Mainten />} />
             <Route path='/changelog' element={<Changelog />} />
           </Routes>
         </Router>
