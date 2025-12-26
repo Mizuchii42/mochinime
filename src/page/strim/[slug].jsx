@@ -108,7 +108,7 @@ const Strm = () => {
             {anime.eps.map((ep, i) => (
               <div
                 key={i}
-                className={`w-full h-10 flex items-center px-3 mt-1 rounded transition
+                className={`w-full h-10 flex px-3 mt-2 rounded transition
                   ${ep.plink === slug
                     ? "bg-sky-500 text-white"
                     : "hover:bg-sky-500 hover:text-white"

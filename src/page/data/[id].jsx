@@ -73,7 +73,7 @@ const Viewpage = () => {
               Daftar Episode
             </h2>
 
-            <div className="overflow-y-auto w-full h-72">
+            <div className="overflow-y-auto w-full h-[400px]">
               {anime.eps.map((ep, i) => (
                 <div className="w-full h-16"> <Link
                   key={i}
