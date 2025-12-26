@@ -94,8 +94,10 @@ const Strm = () => {
       {/* INFO + EPISODE */}
       {anime && (
         <div className="md:w-1/2">
+          <small>{anime.content.skor}</small>
+
           {/* JUDUL EPISODE */}
-          <h1 className="text-xl font-bold mb-2">
+          <h1 className="text-xl font-bold mb-10">
             {currentEpisode?.ptitle}
           </h1>
 
@@ -108,7 +110,7 @@ const Strm = () => {
             {anime.eps.map((ep, i) => (
               <div
                 key={i}
-                className={`w-full h-10 flex px-3 mt-2 rounded transition
+                className={`w-full h-16 flex  mb-2  transition
                   ${ep.plink === slug
                     ? "bg-sky-500 text-white"
                     : "hover:bg-sky-500 hover:text-white"
