@@ -23,13 +23,15 @@ const Strm = () => {
           ),
           localId
             ? axios.get(
-              `https://server.mochinime.cyou/view/${encodeURIComponent(localId)}`
+              `https://server.mochinime.cyou/view/${encodeURIComponent(
+                localId
+              )}`
             )
             : Promise.resolve(null),
         ]);
 
         setStream(streamRes.data);
-        setView(viewRes?.data?.anime || null);
+        setView(viewRes?.data || null);
         setError(null);
       } catch (err) {
         console.error(err);
@@ -47,7 +49,7 @@ const Strm = () => {
   if (loading) {
     return (
       <div className="w-full h-svh flex justify-center items-center">
-        <span class="loading loading-ball loading-xl"></span>
+        <span className="loading loading-ball loading-xl"></span>
       </div>
     );
   }
@@ -68,30 +70,53 @@ const Strm = () => {
     );
   }
 
+  /* ================= DATA ================= */
+
+  const anime = view?.anime?.[0];
+
+  const currentEpisode = anime?.eps?.find(
+    (ep) => ep.plink === slug
+  );
+
   /* ================= RENDER ================= */
 
   return (
-    <div className="pt-20 w-full mx-auto px-4 w-full max-h-min">
+    <div className="pt-20 px-4 md:flex md:gap-4 md:justify-center">
       {/* PLAYER */}
       <iframe
         src={stream.videoStream}
         title="Anime Stream"
-        className="w-full h-50 rounded mb-8"
+        className="w-full md:w-1/2 h-[220px] md:h-[360px] rounded mb-6"
         allowFullScreen
         loading="lazy"
       />
 
-      {view && (
-        <div>
-          <h2 className="text-xl font-bold mb-4">Daftar Episode</h2>
+      {/* INFO + EPISODE */}
+      {anime && (
+        <div className="md:w-1/2">
+          {/* JUDUL EPISODE */}
+          <h1 className="text-xl font-bold mb-2">
+            {currentEpisode?.ptitle}
+          </h1>
 
-          <div className="w-full h-full overflow-y-auto">
-            {view[0]?.eps?.map((ep, i) => (
-              <div className="w-full h-16 mt-2 hover:bg-sky-500 hover:text-white transition">
+          {/* LIST EPISODE */}
+          <h2 className="text-lg font-semibold mb-2">
+            Daftar Episode
+          </h2>
+
+          <div className="w-full h-[400px] md:h-64 overflow-y-auto">
+            {anime.eps.map((ep, i) => (
+              <div
+                key={i}
+                className={`w-full h-10 flex items-center px-3 mt-1 rounded transition
+                  ${ep.plink === slug
+                    ? "bg-sky-500 text-white"
+                    : "hover:bg-sky-500 hover:text-white"
+                  }`}
+              >
                 <Link
-                  key={i}
                   to={`/strim/${encodeURIComponent(ep.plink)}`}
-                  className=""
+                  className="w-full"
                 >
                   {ep.ptitle}
                 </Link>
@@ -99,9 +124,8 @@ const Strm = () => {
             ))}
           </div>
         </div>
-      )
-      }
-    </div >
+      )}
+    </div>
   );
 };
 

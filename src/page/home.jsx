@@ -36,7 +36,7 @@ const Home = () => {
           </h1>
 
           {/* Grid Anime */}
-          <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 gap-2">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2">
             {section.content.map((ani, i) => (
               <div
                 key={i}
