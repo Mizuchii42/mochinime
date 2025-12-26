@@ -20,13 +20,13 @@ const Home = () => {
   if (!data) {
     return (
       <div className="w-full h-svh flex justify-center items-center font-extrabold text-primery">
-        loading...
+        <span class="loading loading-ball loading-xl"></span>
       </div>
     )
   }
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-2 bg-gray-800">
+    <div className="w-full max-w-7xl mx-auto px-2">
       {data.data.map((section, index) => (
         <section key={index} className="pt-20">
 

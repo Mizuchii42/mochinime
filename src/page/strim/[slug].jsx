@@ -47,7 +47,7 @@ const Strm = () => {
   if (loading) {
     return (
       <div className="w-full h-svh flex justify-center items-center">
-        Loading...
+        <span class="loading loading-ball loading-xl"></span>
       </div>
     );
   }
@@ -85,7 +85,7 @@ const Strm = () => {
         <div>
           <h2 className="text-xl font-bold mb-4">Daftar Episode</h2>
 
-          <div className="w-full h-72 bg-gray-800 overflow-y-auto mb-10">
+          <div className="w-full h-full overflow-y-auto">
             {view[0]?.eps?.map((ep, i) => (
               <div className="w-full h-16 mt-2 hover:bg-sky-500 hover:text-white transition">
                 <Link

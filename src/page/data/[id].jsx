@@ -24,7 +24,7 @@ const Viewpage = () => {
   if (!data) {
     return (
       <div className="w-full h-svh flex justify-center items-center font-bold">
-        loading...
+        <span class="loading loading-ball loading-xl"></span>
       </div>
     )
   }
@@ -68,12 +68,12 @@ const Viewpage = () => {
           </div>
 
           {/* Daftar Episode */}
-          <div className="w-full bg-gray-800">
+          <div className="w-full">
             <h2 className="text-xl font-bold">
               Daftar Episode
             </h2>
 
-            <div className="overflow-y-auto w-full h-1/2 bg-gray-800 ">
+            <div className="overflow-y-auto w-full h-full">
               {anime.eps.map((ep, i) => (
                 <div className="w-full h-16"> <Link
                   key={i}
