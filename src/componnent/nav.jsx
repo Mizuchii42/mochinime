@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <div className="w-full h-16 flex justify-items-center backdrop-blur-sm items-center fixed mt-0 mb-0 justify-between">
+      <div className="w-full h-16 flex justify-items-center backdrop-blur-sm items-center justify-between">
         <div>
           <h1 className="font-extrabold text-sky-500 ml-3">mochinime</h1>
           <small className="ml-3 text-gray-500">V.1.0.2</small>

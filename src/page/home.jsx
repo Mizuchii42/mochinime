@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { Menu } from "react-feather"
 import { Link } from "react-router-dom"
 import Menupage from "../componnent/menu"
+import ListGenre from "../componnent/genre"
 
 const Home = () => {
   const [data, setData] = useState(null)
@@ -28,12 +29,12 @@ const Home = () => {
   }
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-1">
-      <div className="pt-20">
-        <Menupage />
+    <div className="w-full max-w-7xl mx-auto px-1 relative">
+      <div className="">
+        <ListGenre />
       </div>
       {data.data.map((section, index) => (
-        <section key={index} className="pt-20">
+        <section key={index} className="mt-5">
 
           {/* Judul Section */}
           <h1 className="text-md md:text-xl font-bold mb-2">
