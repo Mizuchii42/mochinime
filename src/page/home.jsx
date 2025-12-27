@@ -10,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     const getMyapi = async () => {
       try {
-        const res = await axios.get("https://server.mochinime.cyou/home")
+        const res = await axios.get("https://mochiserver.mochinime.cyou/home")
         setData(res.data)
       } catch (err) {
         console.log(err)

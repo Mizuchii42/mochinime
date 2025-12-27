@@ -10,7 +10,7 @@ const Viewpage = () => {
     const mypg = async () => {
       try {
         const res = await axios.get(
-          `https://server.mochinime.cyou/view/${decodeURIComponent(id)}`
+          `https://mochiserver.mochinime.cyou/view/${decodeURIComponent(id)}`
         )
         setData(res.data.anime)
         localStorage.setItem("id-anime", id);

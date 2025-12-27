@@ -19,11 +19,11 @@ const Strm = () => {
 
         const [streamRes, viewRes] = await Promise.all([
           axios.get(
-            `https://server.mochinime.cyou/striming/${encodeURIComponent(slug)}`
+            `https://mochiserver.mochinime.cyou/striming/${encodeURIComponent(slug)}`
           ),
           localId
             ? axios.get(
-              `https://server.mochinime.cyou/view/${encodeURIComponent(
+              `https://mochiserver.mochinime.cyou/view/${encodeURIComponent(
                 localId
               )}`
             )

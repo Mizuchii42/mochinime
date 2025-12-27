@@ -14,7 +14,7 @@ const Search = () => {
     const getSearch = async () => {
       try {
         const res = await axios.get(
-          `https://server.mochinime.cyou/search/${encodeURIComponent(value)}`
+          `https://mochiserver.mochinime.cyou/search/${encodeURIComponent(value)}`
         )
         setData(res.data.search)
       } catch (err) {
