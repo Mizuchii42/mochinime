@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
 const Search = () => {
   const [value, setValue] = useState("")
   const [data, setData] = useState([])
@@ -27,7 +26,7 @@ const Search = () => {
   }, [value])
 
   return (
-    <div className="w-full min-h-svh px-4 bg-gray-800">
+    <div className="w-full min-h-svh px-4">
 
       {/* Input */}
       <div className="pt-20 mb-6">
@@ -37,8 +36,7 @@ const Search = () => {
           onChange={(e) => setValue(e.target.value)}
           className="
             w-full max-w-xl mx-auto flex px-3 py-2 rounded
-            border border-gray-300 dark:border-gray-700
-            bg-white dark:bg-gray-800
+            border border-gray-300
             text-black dark:text-white
             outline-none
           "
@@ -46,7 +44,7 @@ const Search = () => {
       </div>
 
       {/* Result */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 gap-4">
         {data.map((e, index) => (
           <div
             key={index}
