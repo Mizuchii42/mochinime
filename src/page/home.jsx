@@ -1,6 +1,8 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
+import { Menu } from "react-feather"
 import { Link } from "react-router-dom"
+import Menupage from "../componnent/menu"
 
 const Home = () => {
   const [data, setData] = useState(null)
@@ -26,12 +28,15 @@ const Home = () => {
   }
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-2">
+    <div className="w-full max-w-7xl mx-auto px-1">
+      <div className="pt-20">
+        <Menupage />
+      </div>
       {data.data.map((section, index) => (
         <section key={index} className="pt-20">
 
           {/* Judul Section */}
-          <h1 className="text-2xl font-bold mb-3">
+          <h1 className="text-md md:text-xl font-bold mb-2">
             {section.section}
           </h1>
 
@@ -48,7 +53,7 @@ const Home = () => {
                   className="w-32 h-44 object-cover rounded shadow"
                 />
 
-                <h2 className="mt-2 text-sm font-semibold line-clamp-2">
+                <h2 className="mt-2 text-xs font-bold line-clamp-2">
                   <Link to={`/data/${ani.link}`} >{ani.title} </Link>
                 </h2>
               </div>
