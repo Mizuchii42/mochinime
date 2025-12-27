@@ -9,6 +9,7 @@ import Strm from './page/strim/[slug]'
 import Changelog from './page/changelog'
 import Mainten from './page/maintent'
 import Foter from './page/foter'
+import GenreView from './page/genre/[genre]'
 //import { useEffect, useState } from 'react'
 //import axios from 'axios'
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path='/strim/:slug' element={<Strm />} />
             <Route path='/search' element={<Search />} />
             <Route path='/changelog' element={<Changelog />} />
+            <Route path='/genre/:genre' element={<GenreView />} />
           </Routes>
           <Foter />
         </Router>

@@ -1,18 +1,20 @@
+import { Link } from "react-router-dom";
+
 const ListGenre = () => {
   return (
     <>
       <div className="">
         <h1 className="font-bold mb-3">Genre</h1>
         <div className="flex gap-2 w-full flex-wrap h-20 overflow-y-auto">
-          <div class="badge badge-soft badge-primary">Ecchi</div>
-          <div class="badge badge-soft badge-primary">Action</div>
-          <div class="badge badge-soft badge-primary">Comedy</div>
-          <div class="badge badge-soft badge-primary">Adventure</div>
-          <div class="badge badge-soft badge-primary">Demons</div>
-          <div class="badge badge-soft badge-primary">Drama</div>
-          <div class="badge badge-soft badge-primary">Fantasy</div>
-          <div class="badge badge-soft badge-primary">Game</div>
-          <div class="badge badge-soft badge-primary">Herem</div>
+          <div class="badge badge-soft badge-primary"><Link to="/genre/Ecchi">Ecchi</Link></div>
+          <div class="badge badge-soft badge-primary"><Link to="/genre/Action">Action</Link></div>
+          <div class="badge badge-soft badge-primary"><Link to="/genre/Comedy">Comedy</Link></div>
+          <div class="badge badge-soft badge-primary"><Link to="/genre/Adventure">Adventure</Link></div>
+          <div class="badge badge-soft badge-primary"><Link to="/genre/Demons">Demons</Link></div>
+          <div class="badge badge-soft badge-primary"><Link to="/genre/Drama">Drama</Link></div>
+          <div class="badge badge-soft badge-primary"><Link to="/genre/Fantasy">Fantasy</Link></div>
+          <div class="badge badge-soft badge-primary"><Link to="/genre/Game">Game</Link></div>
+          <div class="badge badge-soft badge-primary"><Link to="/genre/Herem">Herem</Link></div>
           <div class="badge badge-soft badge-primary">Historical</div>
           <div class="badge badge-soft badge-primary">Horror</div>
           <div class="badge badge-soft badge-primary">Josei</div>
