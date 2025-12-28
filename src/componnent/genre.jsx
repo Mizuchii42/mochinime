@@ -15,17 +15,17 @@ const ListGenre = () => {
           <div class="badge badge-soft badge-primary"><Link to="/genre/Fantasy">Fantasy</Link></div>
           <div class="badge badge-soft badge-primary"><Link to="/genre/Game">Game</Link></div>
           <div class="badge badge-soft badge-primary"><Link to="/genre/Herem">Herem</Link></div>
-          <div class="badge badge-soft badge-primary">Historical</div>
-          <div class="badge badge-soft badge-primary">Horror</div>
-          <div class="badge badge-soft badge-primary">Josei</div>
-          <div class="badge badge-soft badge-primary">Magic</div>
-          <div class="badge badge-soft badge-primary">Matrial Arts</div>
-          <div class="badge badge-soft badge-primary">Mecha</div>
+          <div class="badge badge-soft badge-primary"><Link to="/genre/Historical">Historical</Link></div>
+          <div class="badge badge-soft badge-primary"><Link to="/genre/Horror">Horror</Link></div>
+          <div class="badge badge-soft badge-primary"><Link to="/genre/Josei">Josei</Link></div>
+          <div class="badge badge-soft badge-primary"><Link to="/genre/Magic">Magic</Link></div>
+          <div class="badge badge-soft badge-primary"><Link to="/genre/matrial-arts">Matrial Arts</Link></div>
+          <div class="badge badge-soft badge-primary"><Link to="/genre/Mecha">Mecha</Link></div>
           <div class="badge badge-soft badge-primary">Military</div>
           <div class="badge badge-soft badge-primary">Music</div>
           <div class="badge badge-soft badge-primary">Mystery</div>
           <div class="badge badge-soft badge-primary">Psychological</div>
-          <div class="badge badge-soft badge-primary">Parody</div>
+          <div class="badge badge-soft badge-primary"><Link to="/genre/Parody">Parody</Link></div>
 
         </div>
       </div>
